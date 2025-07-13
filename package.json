@@ -1,0 +1,33 @@
+{
+  "name": "ts-scope-trimmer-plugin",
+  "version": "0.0.1",
+  "description": "TypeScript plugin for limiting tsserver scope to speed up the experience in code editors",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miroapp/ts-scope-trimmer-plugin.git"
+  },
+  "author": "Ivan Voronin <ivan.v@miro.com>",
+  "bugs": {
+    "url": "https://github.com/miroapp/ts-scope-trimmer-plugin/issues"
+  },
+  "homepage": "https://github.com/miroapp/ts-scope-trimmer-plugin#readme",
+  "dependencies": {
+    "micromatch": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.9",
+    "@types/node": "^24.0.15",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  }
+}
