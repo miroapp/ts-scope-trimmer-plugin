@@ -114,10 +114,10 @@ And then add this plugin to your `tsconfig.json`:
 | Option          | Type     | Default | Description                        |
 | --------------- | -------- | ------- | ---------------------------------- |
 | `enabled`       | boolean  | `false` | Enable/disable the plugin          |
-| `alwaysInclude` | string[] | `[]`    | Glob patterns for files that should always be included, e.g. global types. Relative to the project root. |
+| `alwaysInclude` | string[] | `[]`    | Glob patterns for files that should always be included, e.g. global types. Relative to the project root. [Example](https://github.com/voronin-ivan/large-monorepo/blob/4d334be486d48aa5d8f4ca03a75cdbd79f116392/tsconfig.base.json#L327) |
 | `debug`         | boolean  | `false` | Enable/disable debug logging       |
 
-These options can be specified in `tsconfig.json` or in `ts-scope-trimmer.json` in your project root. The latter has higher priority and can be added to `.gitignore`, so engineers can toggle the plugin locally on demand.
+These options can be specified in `tsconfig.json` ([example](https://github.com/voronin-ivan/large-monorepo/blob/4d334be486d48aa5d8f4ca03a75cdbd79f116392/tsconfig.base.json#L324)) or in `ts-scope-trimmer.json` ([example](https://github.com/voronin-ivan/large-monorepo/blob/4d334be486d48aa5d8f4ca03a75cdbd79f116392/ts-scope-trimmer.json)) in your project root. The latter has higher priority and can be added to `.gitignore`, so engineers can toggle the plugin locally on demand.
 
 ### Requirements
 
