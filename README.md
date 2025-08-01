@@ -130,6 +130,20 @@ This plugin is tested with TypeScript >=5.0.0, Node.js >=18.0.0 and the followin
 - Neovim
 - Zed
 
+## Benchmark
+
+Benchmark was performed in a test repo on [this commit](https://github.com/voronin-ivan/large-monorepo/commit/1a39de7fb841879db329234e2e91b2cca55952d1) with TypeScript 5.9.2, VSCode 1.102.3 (default settings), Mac M1 Pro, 32GB RAM.
+- ms: shows the time in milliseconds it takes to fully load the file (`updateOpen` event)
+- files: shows the number of files that tsserver processes
+
+| File | Before (ms) | After (ms) | Before (files) | After (files) |
+| --- | --- | --- | --- | --- |
+| [apps/crew/pages/_app.tsx](https://github.com/voronin-ivan/large-monorepo/blob/1a39de7fb841879db329234e2e91b2cca55952d1/apps/crew/pages/_app.tsx) | 5100 | 530 | 6510 | 187 |
+| [apps/crew/pages/important-feature-0.tsx](https://github.com/voronin-ivan/large-monorepo/blob/1a39de7fb841879db329234e2e91b2cca55952d1/apps/crew/pages/important-feature-0.tsx) | 5100 | 1400 | 6510 | 1695 |
+| [packages/crew/important-feature-0/src/lib/important-component-0/important-component-0.tsx](https://github.com/voronin-ivan/large-monorepo/blob/1a39de7fb841879db329234e2e91b2cca55952d1/packages/crew/important-feature-0/src/lib/important-component-0/important-component-0.tsx) | 1400 | 1300 | 1653 | 1402 |
+
+The performance improvement varies by file: the fewer the dependencies it has, the greater the benefit.
+
 ## Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
