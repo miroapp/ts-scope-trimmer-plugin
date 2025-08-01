@@ -1,6 +1,6 @@
 {
   "name": "ts-scope-trimmer-plugin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "TypeScript plugin to speed up the experience in code editors",
   "main": "./dist/index.js",
   "files": [
