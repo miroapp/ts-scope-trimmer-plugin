@@ -1,0 +1,38 @@
+{
+  "name": "ts-scope-trimmer-plugin",
+  "version": "0.0.1",
+  "description": "TypeScript plugin to speed up the experience in code editors",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check .",
+    "release": "changeset version && changeset publish && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miroapp/ts-scope-trimmer-plugin.git"
+  },
+  "author": "Ivan Voronin <ivan.v@miro.com>",
+  "bugs": {
+    "url": "https://github.com/miroapp/ts-scope-trimmer-plugin/issues"
+  },
+  "homepage": "https://github.com/miroapp/ts-scope-trimmer-plugin#readme",
+  "dependencies": {
+    "micromatch": "^4.0.8"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/micromatch": "^4.0.9",
+    "@types/node": "^24.0.15",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  }
+}
