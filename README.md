@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="250" height="217" alt="Logo" src="https://i.postimg.cc/MG9BbKfq/logo.png" />
+	<img width="250" height="217" alt="Logo" src="https://raw.githubusercontent.com/miroapp/ts-scope-trimmer-plugin/refs/heads/main/logo.png" />
 </p>
 
 # ts-scope-trimmer-plugin
