@@ -1,5 +1,11 @@
 # ts-scope-trimmer-plugin
 
+## 1.0.2
+
+### Patch Changes
+
+- efc5b0a: Update installation guide
+
 ## 1.0.1
 
 ### Patch Changes
