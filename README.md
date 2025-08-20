@@ -95,7 +95,7 @@ Add this plugin as a dev dependency to your project:
 npm install ts-scope-trimmer-plugin --save-dev
 ```
 
-And then add this plugin to your `tsconfig.json`:
+Add this plugin to your `tsconfig.json`:
 
 ```json
 {
@@ -108,6 +108,8 @@ And then add this plugin to your `tsconfig.json`:
   }
 }
 ```
+
+VSCode/Cursor/Windsurf only: make sure to use [the workspace version of TypeScript](https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-the-workspace-version-of-typescript).
 
 ### Configuration
 
