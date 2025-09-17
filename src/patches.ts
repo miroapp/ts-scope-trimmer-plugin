@@ -19,10 +19,9 @@ export const patchGetScriptFileNames = ({
 	const originalGetScriptFileNames = info.languageServiceHost.getScriptFileNames
 
 	patchedLanguageServiceHost.getScriptFileNames = () => {
-		// keys are lowercased here by default, so we have to lowercase paths in all other places
+		// keys are lowercased here by projectService, so we have to store
+		// and check lowercase paths in all other places
 		const openFiles = Array.from(info.project.projectService.openFiles.keys())
-
-		const allFileNames = originalGetScriptFileNames.call(info.languageServiceHost).map((file) => file.toLowerCase())
 
 		for (const openFile of openFiles) {
 			filesInScope.add(openFile)
@@ -35,6 +34,8 @@ export const patchGetScriptFileNames = ({
 			message: `${openFiles.length} open files added to the scope: ${openFiles.join(', ')}. Scope size: ${filesInScope.size}`,
 		})
 
+		const allFileNames = originalGetScriptFileNames.call(info.languageServiceHost)
+
 		if (config.alwaysInclude.length > 0) {
 			const alwaysIncludedFiles = allFileNames.filter((file) => {
 				const relativeFilePath = config.projectRootPath ? relative(config.projectRootPath, file) : file
@@ -43,7 +44,7 @@ export const patchGetScriptFileNames = ({
 			})
 
 			alwaysIncludedFiles.forEach((file) => {
-				filesInScope.add(file)
+				filesInScope.add(file.toLowerCase())
 			})
 
 			debug({
@@ -55,7 +56,7 @@ export const patchGetScriptFileNames = ({
 		}
 
 		const filtered = allFileNames.filter((file) => {
-			return filesInScope.has(file)
+			return filesInScope.has(file.toLowerCase())
 		})
 
 		debug({
