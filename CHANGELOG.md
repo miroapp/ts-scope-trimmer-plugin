@@ -1,5 +1,11 @@
 # ts-scope-trimmer-plugin
 
+## 1.0.3
+
+### Patch Changes
+
+- 55a7770: Fix issue with lowercasing all filenames
+
 ## 1.0.2
 
 ### Patch Changes
