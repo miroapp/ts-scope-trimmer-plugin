@@ -71,7 +71,7 @@ const getProjectRootPath = (info: ts.server.PluginCreateInfo): ProjectRootPath =
 	const [anyOpenFilePath, projectRootPath] = anyOpenFile
 
 	if (projectRootPath) {
-		return projectRootPath.toLowerCase()
+		return projectRootPath
 	}
 
 	// projectRootPath can be undefined in JetBrains products, e.g. WebStorm.
@@ -88,7 +88,7 @@ const getProjectRootPath = (info: ts.server.PluginCreateInfo): ProjectRootPath =
 			.toString()
 			.trim()
 
-		return gitRoot.toLowerCase()
+		return gitRoot
 	} catch (error) {
 		debug({
 			config: info.config,
