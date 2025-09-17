@@ -1,5 +1,11 @@
 # ts-scope-trimmer-plugin
 
+## 1.0.4
+
+### Patch Changes
+
+- 760fedf: Fix alwaysInclude functionality
+
 ## 1.0.3
 
 ### Patch Changes
