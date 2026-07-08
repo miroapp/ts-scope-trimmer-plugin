@@ -1,10 +1,13 @@
 <p align="center">
-	<img width="250" height="217" alt="Logo" src="https://raw.githubusercontent.com/miroapp/ts-scope-trimmer-plugin/refs/heads/main/logo.png" />
+	<img width="250" height="217" alt="Logo" src="logo.png" />
 </p>
 
 # ts-scope-trimmer-plugin
 
 A TypeScript server plugin that limits the scope of tsserver to speed up the experience in code editors by processing only the open files and their dependencies.
+
+> [!WARNING]
+> Update July 2026: TypeScript 7 (the native Go port) has been [officially released](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/), with major performance gains. It's much faster and consumes less memory, so please upgrade instead of using this plugin.
 
 ## Motivation
 
